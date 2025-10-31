@@ -7,8 +7,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Email {
-    private final String eFrom = "mthanh1095@gmail.com"; //mật khẩu ứng dụng google
-    private final String ePass = "ezct eryf ephd ttvs"; // App Password từ Google
+    private final String eFrom = ""; //mật khẩu ứng dụng google
+    private final String ePass = ""; // App Password từ Google
 
     public boolean isValidEmail(String email) {
         String emailRegex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}$";
