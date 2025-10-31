@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+  <persistence-unit name="PerfumeShopPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- thêm các entity của bạn tại đây -->
+    <class>model.User</class>
+    <class>model.Product</class>
+    <class>model.Category</class>
+    <class>model.Supplier</class>
+    <class>model.Cart</class>
+    <class>model.Wallet</class>
+    <class>model.Spending</class>
+    <class>model.Order</class>
+    <class>model.Item</class>
+    <class>model.Email</class>
+    <properties>
+      <!-- JDBC connection -->
+      <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=Perfume_Website;encrypt=false"/>
+      <property name="jakarta.persistence.jdbc.user" value="sa"/>
+      <property name="jakarta.persistence.jdbc.password" value="123"/>
+      <!-- Hibernate specific -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.connection.autocommit" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
